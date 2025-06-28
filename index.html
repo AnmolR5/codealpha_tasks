@@ -2,55 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Stunning Image Gallery</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoCalculator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to the Image Gallery</h1>
-    <p>Discover masterpieces from around the world</p>
-    <a href="#gallery"><button class="explore-btn">Explore Gallery</button></a>
-  </section>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
 
-  <!-- Filter Section -->
-  <div class="filters">
-    <select id="categoryDropdown" class="mobile-dropdown">
-      <option value="nature">🌿 Nature</option>
-      <option value="mountains">🏔 Mountains</option>
-      <option value="wildlife">🦁 Wildlife</option>
-      <option value="urban">🌆 Urban</option>
-      <option value="seaside">🌊 Seaside</option>
-    </select>
+    <!-- Main Grid -->
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn" data-action="clear">AC</button>
+      <button class="btn" data-action="del">DEL</button>
+      <button class="btn" data-value="%">%</button>
+      <button class="btn operator" data-value="/">÷</button>
 
-    <div class="button-group">
-      <button class="filter-btn" data-category="nature">🌿 Nature</button>
-      <button class="filter-btn" data-category="mountains">🏔 Mountains</button>
-      <button class="filter-btn" data-category="wildlife">🦁 Wildlife</button>
-      <button class="filter-btn" data-category="urban">🌆 Urban</button>
-      <button class="filter-btn" data-category="seaside">🌊 Seaside</button>
+      <!-- Row 2 -->
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn operator" data-value="*">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn operator" data-value="-">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn operator" data-value="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn" data-value="0">0</button>
+      <button class="btn" data-value=".">.</button>
+      <button class="btn equal" data-action="calculate">=</button>
+      <button class="btn" data-func="sqrt">√</button>
+
+      <!-- Row 6: Scientific -->
+      <button class="btn" data-func="sin">sin</button>
+      <button class="btn" data-func="cos">cos</button>
+      <button class="btn" data-func="tan">tan</button>
+      <button class="btn" data-func="log">log</button>
+      <button class="btn" data-func="exp">exp</button>
+      <button class="btn" data-func="pow">^</button>
     </div>
-  </div>
-
-  <!-- Gallery -->
-  <div class="gallery" id="gallery"></div>
-
-  <!-- Lightbox Modal -->
-  <div class="lightbox" id="lightbox">
-    <span class="close" id="closeBtn">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <p class="lightbox-caption" id="lightboxCaption"></p>
-    <button class="nav prev" id="prevBtn">&#10094;</button>
-    <button class="nav next" id="nextBtn">&#10095;</button>
-    <button class="nav slideshow" id="slideshowBtn">▶</button>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
