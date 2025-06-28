@@ -8,3 +8,10 @@ TASK 1: Image Gallery
 ● Add hover effects and smooth transitions.
 ● Ensure responsive design for different screen sizes.
 ● Bonus: Add image filters or categories.
+
+TASK 2: Build a Calculator
+● Create a basic calculator using HTML, CSS, and JavaScript.
+● Include all arithmetic operations: +, −, ×, ÷.
+  Use a clean, responsive layout with sections for About, Projects, etc.
+  Add smooth scroll, animations and hover effects.
+  Bonus: Deploy it on GitHub Pages or Netlify.
