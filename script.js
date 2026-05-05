@@ -123,6 +123,11 @@ function stopSlideshow() {
   slideshowBtn.textContent = '▶';
 }
 
+function scrollToGallery() {
+  document.getElementById("gallery").scrollIntoView({
+    behavior: "smooth"
+}
+
 closeBtn.addEventListener('click', closeLightbox);
 prevBtn.addEventListener('click', showPrev);
 nextBtn.addEventListener('click', showNext);
