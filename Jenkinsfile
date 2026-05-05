@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                echo 'Code cloned from GitHub'
+                echo 'Cloning repo...'
             }
         }
 
@@ -16,8 +16,9 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                bat 'docker rm -f codealpha-container || exit 0'
-                bat 'docker run -d --name codealpha-container -p 8081:80 codealpha-tasks'
+                bat 'docker stop codealpha-container || exit 0'
+                bat 'docker rm codealpha-container || exit 0'
+                bat 'docker run -d -p 8081:80 --name codealpha-container codealpha-tasks'
             }
         }
     }
