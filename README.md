@@ -1,4 +1,4 @@
-DevOps Project: Image Gallery with Docker & Jenkins
+DevOps Project: VisionGrid - Image Gallery with Docker & Jenkins
 
 This project demonstrates a complete DevOps workflow by integrating a responsive Image Gallery Web Application with Docker containerization and Jenkins CI/CD automation.
 
