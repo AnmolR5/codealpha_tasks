@@ -1,30 +1,35 @@
-/* styles.css */
-
-/* General Body Styling */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5; /* Fallback color */
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
-/* Hero Section with Background Image */
 .hero {
   background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 110vh;
+  min-height: 100vh;
   color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
 }
 
 .explore-btn {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   font-size: 1.2rem;
   padding: 12px 24px;
@@ -32,16 +37,19 @@ body {
   border-radius: 6px;
   cursor: pointer;
   margin-top: 20px;
-  transition: background 0.3s, color 0.3s;
 }
 
 .explore-btn:hover {
-  background-color: #000000;
-  color: rgb(255, 255, 255);
+  background-color: #000;
+  color: #fff;
 }
 
+.filters {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
 
-/* Filter Dropdown for Mobile */
 .mobile-dropdown {
   display: none;
   margin: 10px auto;
@@ -49,74 +57,76 @@ body {
   font-size: 1rem;
 }
 
-/* Filter Button Group */
 .button-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 12px;
 }
 
 .filter-btn {
-  padding: 35px 45px;
+  padding: 18px 28px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
   background-color: #333;
   color: white;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 6px;
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn.active {
   background-color: #096e67;
 }
 
-/* Gallery Layout */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
+  gap: 20px;
+  padding: 25px;
 }
 
 .gallery figure {
   margin: 0;
-  max-width: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery figcaption {
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 5px;
+  padding: 10px;
   color: #444;
 }
 
-/* Lightbox Styles */
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .lightbox-img {
   max-width: 90%;
-  max-height: 80%;
+  max-height: 75%;
   border-radius: 10px;
 }
 
@@ -129,21 +139,23 @@ body {
 .close {
   position: absolute;
   top: 20px;
-  right: 30px;
-  font-size: 2rem;
+  right: 35px;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
+  z-index: 10000;
 }
 
 .nav {
   position: absolute;
   top: 50%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
   transform: translateY(-50%);
+  z-index: 10000;
 }
 
 .prev {
@@ -155,18 +167,12 @@ body {
 }
 
 .slideshow {
+  top: auto;
   bottom: 20px;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0);
-  border: 0px solid rgba(255, 255, 255, 0);
-  padding: 0px 0px;
-  font-size: 3rem;
-  border-radius: 4px;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
+  transform: none;
+  font-size: 2.5rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .button-group {
     display: none;
@@ -175,7 +181,12 @@ body {
   .mobile-dropdown {
     display: block;
   }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .gallery figure {
+    width: 90%;
+  }
 }
-
-
-
