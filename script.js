@@ -13,6 +13,12 @@ let currentImages = [];
 let currentIndex = 0;
 let slideshowInterval = null;
 
+const exploreBtn = document.getElementById('exploreBtn');
+
+exploreBtn.addEventListener('click', () => {
+  gallery.scrollIntoView({ behavior: 'smooth' });
+});
+
 const captions = {
   nature: "Relaxing Nature View",
   mountains: "Majestic Mountain Ranges",
