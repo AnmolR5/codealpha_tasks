@@ -1,5 +1,3 @@
-Task-1
-
 const gallery = document.getElementById('gallery');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const dropdown = document.getElementById('categoryDropdown');
