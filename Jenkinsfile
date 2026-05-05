@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t codealpha-tasks .'
+                bat 'docker build --no-cache -t codealpha-tasks .'
             }
         }
 
