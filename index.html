@@ -4,20 +4,23 @@ Task-1
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stunning Image Gallery</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Hero Section -->
+
   <section class="hero">
     <h1>Welcome to the Image Gallery</h1>
     <p>Discover masterpieces from around the world</p>
-    <a href="#gallery"><button class="explore-btn">Explore Gallery</button></a>
+
+    <button class="explore-btn" onclick="scrollToGallery()">
+      Explore Gallery
+    </button>
   </section>
 
-  <!-- Filter Section -->
   <div class="filters">
     <select id="categoryDropdown" class="mobile-dropdown">
       <option value="nature">🌿 Nature</option>
@@ -36,14 +39,13 @@ Task-1
     </div>
   </div>
 
-  <!-- Gallery -->
   <div class="gallery" id="gallery"></div>
 
-  <!-- Lightbox Modal -->
   <div class="lightbox" id="lightbox">
     <span class="close" id="closeBtn">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Gallery Image">
     <p class="lightbox-caption" id="lightboxCaption"></p>
+
     <button class="nav prev" id="prevBtn">&#10094;</button>
     <button class="nav next" id="nextBtn">&#10095;</button>
     <button class="nav slideshow" id="slideshowBtn">▶</button>
